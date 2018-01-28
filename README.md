@@ -1,2 +1,2 @@
-# webpack
-练习小demo
+# webpack+Backbone
+学习webpack知识的练习demo,计划结合Backbone框架做一个小项目
