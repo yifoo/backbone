@@ -47,6 +47,10 @@ module.exports = {
             presets: ["env"]
           }
         }
+      },
+      {
+        test: /\.art$/,
+        loader: "art-template-loader"
       }
     ]
   },  

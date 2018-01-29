@@ -8,7 +8,7 @@
     "build": "webpack --progress --colors --config config/webpack.prod.js",
     "start": "webpack-dev-server  --progress --colors --config config/webpack.dev.js",
     "watch": "webpack --progress --colors --watch",
-    "server": "node server.js"
+    "server": "node config/server.js"
   },
   "keywords": [
     "backbone"
@@ -16,6 +16,7 @@
   "author": "Daniel",
   "license": "ISC",
   "devDependencies": {
+    "art-template-loader": "^1.4.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "clean-webpack-plugin": "^0.1.17",
