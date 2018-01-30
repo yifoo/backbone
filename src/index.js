@@ -5,8 +5,8 @@ import './css/style.css';
   console.log($("body"));
   console.log("你好");
 
-  require([
-    './routes/route',
+require([
+    './routes/router',
 ],function(Route,RouteRegister) {
     window.route = new Route;
 

@@ -9,7 +9,7 @@ module.exports = {
   resolve: {
     alias: {  //别名,引入jQuery之后起的别名
       backbone: path.resolve(__dirname,'../libs/backbone1.3.3.js'), 
-      jquery: path.resolve(__dirname,'../libs/jquery-3.2.1.js')
+      jquery: path.resolve(__dirname,'../libs/jquery-3.2.1.js'),
     }
   },
   plugins: [
@@ -55,7 +55,7 @@ module.exports = {
     ]
   },  
   output: {   //打包输出配置路径
-    filename: '[name]-[hash].bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '' //上线的绝对地址  可以为http://www.haohome.top/
   },  
