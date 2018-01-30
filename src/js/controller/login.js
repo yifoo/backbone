@@ -1,3 +1,9 @@
+/*
+ * @Author: Daniel Hfood 
+ * @Date: 2018-01-30 23:47:23 
+ * @Last Modified by: Daniel 
+ * @Last Modified time: 2018-01-30 23:47:23 
+ */
 define(['../view/login/Vlogin'],function(Login){
   var control = function(){
       // 结构
