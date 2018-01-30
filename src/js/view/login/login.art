@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Backbone</title>
-   <!--[if IE 8]>]
-    <script src="./libs/other/excanvas.compiled.js" type="text/javascript"></script>
-    <![endif]-->
+  <title>Document</title>
 </head>
 <body>
-    <a href="#login">登录</a>
-    <div id="root"></div>
+  <form action="" method="post">
+    用户名:<input type="text"><br>
+    密码: <input type="text"><br>
+    <input type="button" value="登录">
+  </form>
 </body>
 </html>
