@@ -8,6 +8,7 @@ define(['../view/login/Vlogin'],function(Login){
       // 最后路由切换时做一些销毁工作，例如view.undelegateEvents(),view.stopListening();Backbone.off();
       control.onRouteChange = function () {
           login.stopListening();
+          login.undelegateEvents();
       };
   };
   return control;
