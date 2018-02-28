@@ -1,14 +1,14 @@
 /*
  * @Author: Daniel Hfood 
  * @Date: 2018-01-30 23:47:33 
- * @Last Modified by: Daniel 
- * @Last Modified time: 2018-01-30 23:47:33 
+ * @Last Modified by: Daniel
+ * @Last Modified time: 2018-02-01 08:59:51
  */
 define([
 ],function(){
   var Route=Backbone.Router.extend({
     routes:{
-      'login':'js/controller/login',
+      'login':          'js/controller/login',
     },
     route:function(route, name, callback){  //重写route方法,匹配js/controller/login的方法
       if (!_.isRegExp(route)) route = this._routeToRegExp(route);
