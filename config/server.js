@@ -4,6 +4,7 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const http=require("http");
 const bodyParser=require("body-parser");
 const routerReq = require('../data/router/req_idea');
+const ProgressBar = require('progress');
 
 let app = express();
 const config = require('./webpack.dev.js');
@@ -22,3 +23,18 @@ server.listen(3000, function () {
 app.use( bodyParser.urlencoded({extended:false}) );
 
 app.use('/req', routerReq);
+
+
+
+/**
+ * 输出进度
+ */
+var bar = new ProgressBar(':percent :bar', { total: 10 });
+var timer = setInterval(function () {
+  bar.tick();
+  console.log("当前进度",bar.curr+"0%");
+  if (bar.complete) {
+    console.log('\ncomplete\n');
+    clearInterval(timer);
+  }
+}, 100);

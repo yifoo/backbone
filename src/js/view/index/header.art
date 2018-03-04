@@ -1,0 +1,27 @@
+<div class="logo"></div>
+  <div class="head-middle">
+    <div class="sort">
+      <ul>
+        <li class="active">最新</li>
+        <li>热门</li>
+      </ul>
+    </div>
+    <input type="text" placeholder="搜索：请输入关键词">
+    <svg class="icon icon-search" aria-hidden="true">
+      <use xlink:href="#icon-search"></use>
+    </svg>
+    <button>提问</button>
+  </div>
+  <div class="r-box">
+    <div class="loginbox">
+      <ul>
+        <li>登录</li>
+        <li>|</li>
+        <li>注册</li>
+      </ul>
+    </div>
+    <!-- 移动端才显示菜单 -->
+    <svg class="icon icon-menu" aria-hidden="true">
+      <use xlink:href="#icon-menu"></use>
+    </svg>
+  </div>
