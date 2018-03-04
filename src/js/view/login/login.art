@@ -1,5 +1,0 @@
-<form action="" method="post">
-  用户名:<input type="text"><br>
-  密码: <input type="text"><br>
-  <input type="button" value="登录">
-</form>

@@ -39,6 +39,11 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
+      {
+        test: /\.less$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader?importLoaders=1',"postcss-loader",'less-loader']
+      },
       { test: /\.js$/, 
         exclude: /(node_modules|bower_components)/,
         use: {
@@ -48,6 +53,12 @@ module.exports = {
           }
         }
       },
+      {test: /\.(ico|png|jpg|gif)$/,use: [
+        {
+          loader: 'file-loader',
+          options: {}
+        }
+      ]},
       {
         test: /\.art$/,
         loader: "art-template-loader"
