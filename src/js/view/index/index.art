@@ -131,7 +131,6 @@
         </div>
         <div class="afterLogin"></div>
       </div>
-
       <div id="voteBoard" class="clear">
         <div class="title">投票积分排名</div>
         <div class="banner">

@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 module.exports = {
   entry: {
@@ -32,17 +33,24 @@ module.exports = {
       underscore:"underscore",
       Backbone: "backbone",
     }),
+    new ExtractTextPlugin({
+      filename: "[name].bundle.css",
+      disable: false,
+      allChunks: true
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ExtractTextPlugin.extract({fallback: "style-loader",use: "css-loader"})
+        // use: ['style-loader', 'css-loader']
       },
       {
         test: /\.less$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader?importLoaders=1',"postcss-loader",'less-loader']
+        use: ExtractTextPlugin.extract({fallback: "style-loader",use: "css-loader!postcss-loader!less-loader"})
+        // use: ['style-loader', 'css-loader?importLoaders=1',"postcss-loader",'less-loader']
       },
       { test: /\.js$/, 
         exclude: /(node_modules|bower_components)/,
